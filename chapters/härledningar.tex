@@ -1,0 +1,25 @@
+\subsection{Teckenförklaring}
+I denna sammanfattning använder jag vissa matematiska tecken som är ibland mer advancerade än bara de vi går igenom. Följande är deras definitioner:
+
+\subsubsection*{Indefinit integral}
+\label{def:indefint}
+Tecknet $\int$ står för en \emph{indefinit integreal} när inga integrationsgränser är angivna. Detta motsvarar att hitta primitiv funktion till något så givet att \[f(x) = kx + m\] gäller att
+\begin{equation*}
+    F(x) = \int{f(x)}\, dx = \frac{kx^2}{2} + mx + C.
+\end{equation*}
+
+Detta gäller för alla funktioner oavsett variabel, grad eller liknande man använder helt enkelt vanliga primitiva funktionsregler på lite mer effektivt sätt. Ja, man kan använda indefinit integral på prov enligt Mattias.
+
+\subsection{Allmän rörelse}
+Givet att funktionen $a(t) = kt + a_0$ där $a_0$ är en konstant startacceleration kommer nu härledningen till $s(t)$ från detta:
+\begin{align*}
+    a(t) &= kt + a_0 \\
+    v(t) &= \int{a(t)}\, dt = \frac{kt^2}{2} + a_0t + C_1 &C_1 &= v_0 \\
+    v(t) &= \frac{kt^2}{2} + a_0t + v_0 \\
+    s(t) &= \int{v(t)}\, dt = \frac{kt^3}{6} + \frac{a_0t^2}{2} + v_0t + C_2 &C_2 &= s_0
+\end{align*}
+
+\begin{center}
+    \tcbox{\( s(t) = \frac{kt^3}{6} + \frac{a_0t^2}{2} + v_0t + s_0 \)}
+\end{center}
+

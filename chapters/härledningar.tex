@@ -11,15 +11,16 @@ Tecknet $\int$ står för en \emph{indefinit integreal} när inga integrationsgr
 Detta gäller för alla funktioner oavsett variabel, grad eller liknande man använder helt enkelt vanliga primitiva funktionsregler på lite mer effektivt sätt. Ja, man kan använda indefinit integral på prov enligt Mattias.
 
 \subsection{Allmän rörelse}
+\label{derive:allmänrörelse}
 Givet att funktionen $a(t) = kt + a_0$ där $a_0$ är en konstant startacceleration kommer nu härledningen till $s(t)$ från detta:
-\begin{align*}
-    a(t) &= kt + a_0 \\
-    v(t) &= \int{a(t)}\, dt = \frac{kt^2}{2} + a_0t + C_1 &C_1 &= v_0 \\
-    v(t) &= \frac{kt^2}{2} + a_0t + v_0 \\
-    s(t) &= \int{v(t)}\, dt = \frac{kt^3}{6} + \frac{a_0t^2}{2} + v_0t + C_2 &C_2 &= s_0
-\end{align*}
-
-\begin{center}
-    \tcbox{\( s(t) = \frac{kt^3}{6} + \frac{a_0t^2}{2} + v_0t + s_0 \)}
-\end{center}
-
+\begin{gather*}
+    \begin{aligned}
+        \centering
+        a(t) &= kt + a_0 \\
+        v(t) &= \int{a(t)}\, dt = \frac{kt^2}{2} + a_0t + C_1 & C_1 &= v_0 \\
+        v(t) &= \frac{kt^2}{2} + a_0t + v_0 \\
+        s(t) &= \int{v(t)}\, dt = \frac{kt^3}{6} + \frac{a_0t^2}{2} + v_0t + C_2 & C_2 &= s_0 \\[10pt]
+    \end{aligned} \\[10pt]
+    \tcboxmath{s(t) = \frac{kt^3}{6} + \frac{a_0t^2}{2} + v_0t + s_0}
+\end{gather*}
+\noindent Här är \(a_0 = \text{acceleration från start, } v_0 = \text{hastighet från start och } s_0 = \text{den redan färdade sträckan från start}\).

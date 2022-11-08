@@ -21,6 +21,10 @@
 \usepackage{graphicx}
 \usetikzlibrary{bending}
 
+% Make the heart character work
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheartsuit}{\mathalpha}{extraup}{86}
+
 \theoremstyle{definition}
 \newtheorem{exm}{Exempel}
 \title{Sammanfattning - Fysik 1 \\ Blackebergs Gymnasium}
@@ -41,6 +45,13 @@
     \tableofcontents
 
     \newpage
+
+    \section*{Förord}
+    Innan början finns det några viktiga saker att utreda för denna sammanfattning. Först av allt är detta ett fritidsprojekt och inte skolmaterial, därför finns det ingen garanti på att allt är 100\% rätt dock borde dokumentet överlag inte innehålla några större faktafel. Nästa punkt är att denna sammanfattning är gjord för effektivitet så alla förklaringar är inte fullständiga och huvuddelen innehåller inte fullständiga härledning och heller inte många räkneexempel. Om du söker fullständiga förklaring på vissa saker får du gärna titta i bilagorna mot slutet av dokumentet. Där hittar du även förklaringar till matematiska täcken som jag använder men som vi inte har gått igenom. 
+    \begin{center}
+        \large{Ha kul främst av allt, men kom ihåg likt vad Tor brukar säga:}\\
+        \Large{Jag \textcolor{red}{$\varheartsuit$} Fysik!}
+    \end{center}
 
     \part{Rörelse}
     \input{chapters/rörelse.tex}

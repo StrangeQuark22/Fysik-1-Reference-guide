@@ -36,9 +36,25 @@ eftersom
 \begin{align*}
     v(t) &= s'(t) \\
     a(t) &= v'(t) = s''(t) \\
-    s(t) &= \int{v(t)}\, dt = \iint{a(t)}\, dt\, dt
+    s(t) &= \hyperref[def:indefint]{\int} {v(t)}\, dt = \iint{a(t)}\, dt\, dt
 \end{align*}
 (För fullständig härledning och teckenförklaring se bilaga \ref{derive:allmänrörelse}) Utifrån detta kan vi nu beräkna all rörelse bara vi vet formeln för en av storheterna. Om det inte finns en formel ska den hittas experimentellt eller så går det inte. Man kan sätta in valfri funktion för $a(t)$ och om man integrerar korrekt får man ändå rätt svar så detta är verkligen en allmän metod.
 
 \section{Rörelsemängd}
-Ett föremåls rörelsemängd är dess hastighet multiplicerat med dess massa och beteckans $p$. Formeln är: \[ p = mv\, \left[\mathrm{\frac{kg \cdot m}{s}  = kgm/s}\right] \] Likt hastigheten är detta en vektor och har därför en riktning. Rörelsemängden skiljer sig från rörelseenergin $E_k$ eftersom den är proportionell mot hastigheten medan $E_k \propto \frac{v^2}{2}$ 
+Ett föremåls rörelsemängd är dess hastighet multiplicerat med dess massa och beteckans $p$. Formeln är: \[ p = mv\, \left[\mathrm{\frac{kg \cdot m}{s}  = kgm/s = N \cdot s}\right]\] Likt hastigheten är detta en vektor och har därför en riktning. Rörelsemängden skiljer sig från rörelseenergin $E_k$ eftersom $p \hyperref[def:propto]{\propto} v$ medan $E_k \propto v^2$.
+\subsection{Stötar}
+När två föremål krockar, dvs. stöter in i varandra så sker det ett utbyte av rörelsemängd. $p$ bevaras olika beroende på typen av stöt.
+Se exempel nedan:
+\begin{table*}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Elastisk stöt          & Oelastiskt stöt             & fullständigt oelastisk stöt \\ \hline
+        \begin{tikzpicture}
+            \draw (0,0) -- (1,0);
+        \end{tikzpicture}   &                             &                             \\ \hline
+        Rörelseenergin bevaras & Rörelseenergin bevaras inte & Rörelseenergin bevaras inte \\ \hline
+    \end{tabular}
+\end{table*}
+\subsubsection{Elastiskta stötar}
+Vid s.k. \emph{elastiska stötar} så bevaras rörelseenergin. En elastisk stöt innebär att de två krockande föremålen inte fastnar i varandra utan förblir separata föremål. Generellt sett stöts de bort från varandra och åker åt olika håll efter stöten, dock inte alltid.

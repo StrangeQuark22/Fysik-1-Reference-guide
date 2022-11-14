@@ -28,3 +28,25 @@ Givet att funktionen $a(t) = kt + a_0$ där $a_0$ är en konstant startaccelerat
     \tcboxmath{s(t) = \frac{kt^3}{6} + \frac{a_0t^2}{2} + v_0t + s_0}
 \end{gather*}
 \noindent Här är \(a_0 = \text{acceleration från start, } v_0 = \text{hastighet från start och } s_0 = \text{den redan färdade sträckan från start}\). Alla integraler kan beräknas med reglerna från formelsamlingen.
+
+\subsection{Lagen om rörelsemängdens bevarande}
+\label{derive:conserverationmomentum}
+Denna lag ger oss att efter en stöt kommer rörelsemängden i systemet alltid att bevaras. Föreställ dig att två föremål med massam $m_1$ och $m_2$ har hastigheterna $u_1$ och $u_2$. De krockar sedan elastiskt där föremål 1 verkar på föremål 2 med kraften $F_1$ medan föremål 2 verkar med kraften $F_2$. Sambandet mellan dessa krafter är
+\begin{equation*}
+    F_2 = -F_1 \: \text{enligt N III}
+\end{equation*}
+Föremålens krock pågår under en liten tid $\Delta t$. Impulsen som de båda påverkar varandra med blir då:
+\begin{align*}
+    \Delta p_1 &= F_2 \cdot \Delta t = m_1v_1 - m_1u_1 \\
+    \Delta p_2 &= F_1 \cdot \Delta t = m_2v_2 - m_2u_2
+\end{align*}
+där $v_1$ och $v_2$ är hastigheterna efter krocken. Givet ovanstående kraftsamband får vi då:
+\begin{align*}
+    \Delta p_1 = -F_1 \cdot \Delta t &= -(F_1 \cdot \Delta t) = -\Delta p_2 \\
+    \Delta p_1 &= -\Delta p_2 \\
+    m_1v_1 - m_1u_1 &= -(m_2v_2 - m_2u_2) \\
+    m_1v_1 - m_1u_1 &= -m_2v_2 + m_2u_2 \\
+    m_1u_1 + m_2u_2 &= m_1v_1 + m_2v_2 \\
+    p_{innan} &= p_{efter} \qed
+\end{align*}
+alltså konserveras rörelsemängden.

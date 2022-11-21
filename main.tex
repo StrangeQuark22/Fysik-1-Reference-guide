@@ -25,6 +25,7 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 \usetikzlibrary{bending}
+\usetikzlibrary{calc}
 \usepackage{tcolorbox}
 \tcbuselibrary{theorems}
 \usepackage{array}
@@ -64,6 +65,33 @@
     \input{chapters/rörelse.tex}
 
     \part{Krafter}
+    En kraft är en vektorstorhet, dvs. att den har en riktning, som oftast definieras som produkten av accelerationen och massan.
+    \begin{equation*}
+        F=ma
+    \end{equation*}
+    Lägg märke till att vi inte använder vanlig vektornotation ($\vec{F}$) eftersom storleken av kraften är det man oftast söker, speciellt i denna kurs. Med detta menas att $F = |\vec{F}|$. Enheten för kraft är Newton (N) och beskrivs i grundenheter som $\frac{kg \cdot m}{s^2}$. När man söker riktningen av en kraft beskrivs detta nästan aldrig som en vektor ändå så denna fakta är mest för rätthet än nyttig användning.
+
+    Det viktigaste som du kan veta om krafter är att enligt newtons lagar finns det alltid två av varje kraft. Han sade att ''varje kraft har en lika och motsatt \emph{reaktionskraft}'' (N III). Detta är exakt vad man tror det är. En kraft som verkar på ett föremål kommer att ha en reaktion från det föremålet i motsatt riktning med samma magnitud.
+
+    Krafter kommer i många olika slag och de flesta från kursen finns förklarade nedan men en av de viktigaste och mest universella krafttyperna är normalkraften $N$ (mer sällsynt $F_n$). Denna är en kraft som är vinkelrät mot någon yta, dvs. normal mot ytan. Det finns enligt newtons tredje lag naturligtvis alltid två normalkrafter.
+    \begin{exm}
+        En låda sitter på ett bord under jordens gravitation. (I verkligheten är alla krafter i en och samma vertikala linje men är separerade för visualiseringens skull.)
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[thick] (-6,0) -- (6,0);
+                \foreach \x in {-5.5,-5,...,6}  
+                    \draw[thick] (\x,0) -- ++(-0.5,-0.5);
+                \draw[very thick] (-2,2) rectangle (2,0);
+                \draw[->, very thick, color=red!80!orange] (-0.1,0) -- ++(0,2.5) node [anchor=south west] {$N$};
+                \filldraw[very thick, color=red!80!orange] (-0.1,0) circle [radius=0.05];
+                \draw[->, very thick, color=red!80!orange] (0.1,0) -- ++(0,-2.5) node [anchor=north east] {$-N$};
+                \filldraw[very thick, color=red!80!orange] (0.1,0) circle [radius=0.05];
+                \draw[->, very thick, color=blue!80!cyan] (0,1) -- ++(0,-2.5) node [anchor=north east] {$F_g$};
+                \filldraw[very thick, color=blue!80!cyan] (0,1) circle [radius=0.05];
+            \end{tikzpicture}
+        \end{center}
+    \end{exm}
+
     \input{chapters/krafter.tex}
 
     \newpage

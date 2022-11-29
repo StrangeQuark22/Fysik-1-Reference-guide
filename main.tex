@@ -24,8 +24,7 @@
 \usepackage{pgf}
 \usepackage{tikz}
 \usepackage{graphicx}
-\usetikzlibrary{bending}
-\usetikzlibrary{calc}
+\usetikzlibrary{calc,decorations.pathmorphing}
 \usepackage{tcolorbox}
 \tcbuselibrary{theorems}
 \usepackage{array}
@@ -65,7 +64,7 @@
     \input{chapters/rörelse.tex}
 
     \part{Krafter}
-    En kraft är en vektorstorhet, dvs. att den har en riktning, som oftast definieras som produkten av accelerationen och massan.
+    En kraft är en vektorstorhet, dvs. att den har en riktning, som oftast definieras som produkten av accelerationen och massan. Denna beskrivs av Newtons andra lag (N II)---\emph{kraftlagen}---som
     \begin{equation*}
         F=ma
     \end{equation*}
@@ -75,7 +74,7 @@
 
     Krafter kommer i många olika slag och de flesta från kursen finns förklarade nedan men en av de viktigaste och mest universella krafttyperna är normalkraften $N$ (mer sällsynt $F_n$). Denna är en kraft som är vinkelrät mot någon yta, dvs. normal mot ytan. Det finns enligt newtons tredje lag naturligtvis alltid två normalkrafter.
     \begin{exm}
-        En låda sitter på ett bord under jordens gravitation. (I verkligheten är alla krafter i en och samma vertikala linje men är separerade för visualiseringens skull.)
+        En låda sitter på ett bord under jordens gravitation (I verkligheten är alla krafter i en och samma vertikala linje men är separerade för visualiseringens skull). Alla krafter på bilden är lika stora och alla krafter har en lika och motsatt reaktionskraft. $F_g = -N$ då denna kraft är densamma som lådan verkar på bordet med och $N$ är lika stor men motsatt som rekation. Båda normalkrafter angriper vid kontaktytan medan $F_g$ angringer vid masscentrum.
         \begin{center}
             \begin{tikzpicture}
                 \draw[thick] (-6,0) -- (6,0);

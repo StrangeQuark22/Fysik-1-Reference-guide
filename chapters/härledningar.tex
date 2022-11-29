@@ -5,7 +5,7 @@ I denna sammanfattning använder jag vissa matematiska tecken som är ibland mer
 \label{def:indefint}
 Tecknet $\int$ står för en \emph{indefinit integreal} när inga integrationsgränser är angivna. Detta motsvarar att hitta primitiv funktion till något så givet att \[f(x) = kx + m\] gäller att
 \begin{equation*}
-    F(x) = \int{f(x)}\, dx = \frac{kx^2}{2} + mx + C.
+    F(x) = \int{f(x)}\, dx = \frac{kx^2}{2} + mx + C
 \end{equation*}
 
 Detta gäller för alla funktioner oavsett variabel, grad eller liknande man använder helt enkelt vanliga primitiva funktionsregler på lite mer effektivt sätt. Ja, man kan använda indefinit integral på prov enligt Mattias.
@@ -50,3 +50,48 @@ där $v_1$ och $v_2$ är hastigheterna efter krocken. Givet ovanstående kraftsa
     p_{innan} &= p_{efter} \qed
 \end{align*}
 alltså konserveras rörelsemängden.
+
+\subsection{Arkimedes princip}
+\label{def:arkimedes}
+Här följer en härledning för ett föremål med godtycklig volym och densitet givet arkimedes princip. Utifrån bilden kan vi se ett föremål med oregelbunden form som är ett vanligt prisma. Utifrån detta vet vi att $V = Ah$. Vi vet även den generella formeln för tryck i vätska: $P = \rho gh$. I detta fall är $h$ djupet i vätskan, jag vet att det är förvirrande med två $h$ men hellre detta än icke-standardiserade variabler. Detta ger oss följande iakttaglser:
+\begin{equation*}
+    P_1 = \rho gd \qquad P_2 = \rho g(d+h)
+\end{equation*}
+Efter detta inser man även att
+\begin{equation*}
+    |d+h| > |d| \implies P_2 > P_1
+\end{equation*}
+Vill vi få ut kraft ur ett tryck får vi att $F = PA$. Detta leder oss då till följande:
+\begin{equation*}
+    F_1 = P_1A \qquad F_2 = P_2A
+\end{equation*}
+sedan vet vi att
+\begin{equation*}
+    P_2 > P_1 \implies F_2 > F_1
+\end{equation*}
+För tydlighetens skulle är $F_2$ kraften som verkar uppåt på botten av föremålet på grund av vätsketrycket och $F_1$ är kraften som verkar nedåt på toppen av föremålet på grund av vätsketrycket. Utifrån dett kan vi logiskt inse att
+\begin{gather*}
+    \begin{aligned}
+        F_L &= F_2 - F_1 \\
+        F_L &= P_2A - P_1A \\
+        F_L &= A(\rho g(d+h)) - A(\rho gd) \\
+        F_L &= A\rho g((\cancel{d}+h)-\cancel{d}) \\
+        F_L &= A\rho gh = Ah \cdot \rho g \qquad Ah = V
+    \end{aligned} \\
+    \tcboxmath{F_L = \rho gV \qed}
+\end{gather*}
+\begin{center}
+    \begin{tikzpicture}[every path/.style={very thick}]
+        %container
+        \filldraw[color=cyan!80!blue, fill opacity=0.25] decorate [decoration={snake,amplitude=0.6mm,segment length=0.79cm}] {(-7,-0.3) -- ++ (14,0)} [rounded corners=5pt] -- ++(0,-6.7) -- ++(-14,0) [sharp corners] -- cycle;
+        \draw[ultra thick, rounded corners=5pt, line cap=round] (-7,0) -- ++(0,-7) -- ++(14,0) -- ++(0,7);
+        %shape
+        \draw[line join=round] (-1,-1.5) .. controls (-0.8, -2) and (-0.4, -1.4) .. (0,-1.5) arc [start angle=85,delta angle=-200, radius=0.3cm] node [pos=0.4, anchor=east] {$A$} .. controls (-0.5,-1.9) .. (-1.3,-1.85) arc [start angle=272, delta angle=-250, radius=0.3cm] -- cycle;
+        \draw[line join=round,yshift=-1.7cm] (-1,-1.5) .. controls (-0.8, -2) and (-0.4, -1.4) .. (0,-1.5) arc [start angle=85,delta angle=-200, radius=0.3cm] node [pos=0.4, anchor=east] {$A$} .. controls (-0.5,-1.9) .. (-1.3,-1.85) arc [start angle=272, delta angle=-250, radius=0.3cm] -- cycle;
+        \draw[dashed, line cap=round] (-1.61,-1.5) -- ++(0,-1.7);
+        \draw[dashed, line cap=round] (0.27, -1.8) -- ++(0,-1.7);
+        %height
+        \draw[decorate, decoration={calligraphic brace,amplitude=2mm}, xshift=0.1cm] (0.27, -1.8) -- ++(0,-1.7) node[pos=0.5, anchor=west, right=2pt] {$h$};
+        \draw[decorate, decoration={calligraphic brace,amplitude=2mm}, xshift=0.1cm] (0.27, -0.23) -- ++(0,-1.53) node[pos=0.5, anchor=west, right=2pt] {$d$};
+    \end{tikzpicture}
+\end{center}

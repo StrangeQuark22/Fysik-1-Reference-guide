@@ -32,6 +32,7 @@
 % Make the heart character work
 \DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
 \DeclareMathSymbol{\varheartsuit}{\mathalpha}{extraup}{86}
+\newcommand{\degC}{$^\circ \mathrm{C}$}
 
 
 \title{Sammanfattning - Fysik 1 \\ Blackebergs Gymnasium}
@@ -40,38 +41,38 @@
 \newcommand{\noref}{\textcolor{red}{\textbf{\textit{\underline{missing reference}}}}}
 
 \begin{document}
-    \begin{titlepage}
-        \maketitle
-        \centering
-        \vfill
-        \includegraphics[width=0.6\textwidth]{title.jpg}
-        \vfill
-        \textbf{OBS!} Alla siffror/referenser som verkar vara länkar är antagligen länkar. Svåra/ogenomgångna matte-symboler borde också vara länkar som leder till förklaring, dock endast for första uppkomsten per ekvation. Tryck gärna om du undrar nåt!
-    \end{titlepage}
+\begin{titlepage}
+    \maketitle
+    \centering
+    \vfill
+    \includegraphics[width=0.6\textwidth]{title.jpg}
+    \vfill
+    \textbf{OBS!} Alla siffror/referenser som verkar vara länkar är antagligen länkar. Svåra/ogenomgångna matte-symboler borde också vara länkar som leder till förklaring, dock endast for första uppkomsten per ekvation. Tryck gärna om du undrar nåt!
+\end{titlepage}
 
-    \tableofcontents
+\tableofcontents
 
-    \newpage
+\newpage
 
-    \section*{Förord}
-    Innan början finns det några viktiga saker att utreda för denna sammanfattning. Först av allt är detta ett fritidsprojekt och inte skolmaterial, därför finns det ingen garanti på att allt är 100\% rätt dock borde dokumentet överlag inte innehålla några större faktafel. Nästa punkt är att denna sammanfattning är gjord för effektivitet så alla förklaringar är inte fullständiga och huvuddelen innehåller inte fullständiga härledning och heller inte många räkneexempel. Om du söker fullständiga förklaring på vissa saker får du gärna titta i bilagorna mot slutet av dokumentet. Där hittar du även förklaringar till matematiska täcken som jag använder men som vi inte har gått igenom. Jag kommer heller inte förklara vanliga symboler för storheter som ex. massma ($m$) och hastighet ($v$).
-    \begin{center}
-        \large{Ha kul främst av allt, men kom ihåg likt vad Tor brukar säga:}\\
-        \Large{Jag \textcolor{red}{$\varheartsuit$} Fysik!}
-    \end{center}
+\section*{Förord}
+Innan början finns det några viktiga saker att utreda för denna sammanfattning. Först av allt är detta ett fritidsprojekt och inte skolmaterial, därför finns det ingen garanti på att allt är 100\% rätt dock borde dokumentet överlag inte innehålla några större faktafel. Nästa punkt är att denna sammanfattning är gjord för effektivitet så alla förklaringar är inte fullständiga och huvuddelen innehåller inte fullständiga härledning och heller inte många räkneexempel. Om du söker fullständiga förklaring på vissa saker får du gärna titta i bilagorna mot slutet av dokumentet. Där hittar du även förklaringar till matematiska täcken som jag använder men som vi inte har gått igenom. Jag kommer heller inte förklara vanliga symboler för storheter som ex. massma ($m$) och hastighet ($v$).
+\begin{center}
+    \large{Ha kul främst av allt, men kom ihåg likt vad Tor brukar säga:}\\
+    \Large{Jag \textcolor{red}{$\varheartsuit$} Fysik!}
+\end{center}
 
-    \part{Rörelse}
-    \input{chapters/rörelse.tex}
+\part{Rörelse}
+\input{chapters/rörelse.tex}
 
-    \part{Termodynamik}
-    Termodynamik är läran om värme och inre energi.
-    \input{chapters/termodynamik.tex}
+\part{Termodynamik}
+Termodynamik är läran om värme och inre energi. Här vill man undersöka hur temperatur och potentiell energi inuti föremål förhåller sig till varandra. Namnet betyden bokstavligen ''dynamiken av värme'' dvs. läran om hur värme rör sig, överförs och förhåller sig till sin omgivning.
+\input{chapters/termodynamik.tex}
 
-    \newpage
-    \appendix
-    \section{Härledningar}
-    \label{appendix:härledning}
-    \input{chapters/härledningar.tex}
-    \section{Exempel}
-    \label{appendix:exempel}
+\newpage
+\appendix
+\section{Härledningar}
+\label{appendix:härledning}
+\input{chapters/härledningar.tex}
+\section{Exempel}
+\label{appendix:exempel}
 \end{document}
